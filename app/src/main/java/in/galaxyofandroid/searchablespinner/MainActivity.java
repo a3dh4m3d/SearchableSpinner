@@ -23,27 +23,29 @@ public class MainActivity extends AppCompatActivity {
         final TextView selectedItems = (TextView) findViewById(R.id.txt);
 
 
-        items.add("Mumbai");
-        items.add("Delhi");
-        items.add("Bengaluru");
-        items.add("Hyderabad");
-        items.add("Ahmedabad");
-        items.add("Chennai");
-        items.add("Kolkata");
-        items.add("Surat");
-        items.add("Pune");
-        items.add("Jaipur");
-        items.add("Lucknow");
-        items.add("Kanpur");
+        items.add("گزینه اول");
+        items.add("گزینه دوم");
+        items.add("گزینه سوم");
+        items.add("گزینه چهارم");
+        items.add("گزینه پنجم");
+        items.add("گزینه ششم");
+        items.add("گزینه هفتم");
+        items.add("گزینه هشتم");
+        items.add("گزینه نهم");
+        items.add("گزینه دهم");
 
+
+     //   spinnerDialog=new SpinnerDialog(MainActivity.this,items,"انتخاب گزینه مورد نظر","بستن");// With No Animation
         spinnerDialog = new SpinnerDialog(MainActivity.this, items,
-                "Select or Search City");
+                "انتخاب گزینه مورد نظر");
 
-        spinnerDialog.setTitleColor(getResources().getColor(R.color.colorAccent));
-        spinnerDialog.setSearchIconColor(getResources().getColor(R.color.colorAccent));
+        spinnerDialog=new SpinnerDialog(MainActivity.this,items,"انتخاب گزینه مورد نظر",R.style.DialogAnimations_SmileWindow,"بستن");// With 	Animation
+
+      //  spinnerDialog.setTitleColor(getResources().getColor(R.color.colorAccent));
+     /*   spinnerDialog.setSearchIconColor(getResources().getColor(R.color.colorAccent));
         spinnerDialog.setSearchTextColor(getResources().getColor(R.color.colorAccent));
         spinnerDialog.setItemColor(getResources().getColor(R.color.colorAccent));
-        spinnerDialog.setItemDividerColor(getResources().getColor(R.color.colorAccent));
+        spinnerDialog.setItemDividerColor(getResources().getColor(R.color.colorAccent));*/
         spinnerDialog.setCloseColor(getResources().getColor(R.color.colorAccent));
 
         spinnerDialog.setCancellable(true);
