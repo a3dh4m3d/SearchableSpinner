@@ -35,6 +35,7 @@ public class SpinnerDialog {
     boolean cancellable = false;
     boolean showKeyboard = false;
     boolean useContainsFilter = false;
+    boolean showTitle = true;
     int titleColor,searchIconColor,searchTextColor,itemColor,itemDividerColor,closeColor;
 
     private void initColor(Context context){
@@ -87,6 +88,16 @@ public class SpinnerDialog {
         this.hint = hint ;
         initColor(context);
     }
+    public SpinnerDialog(Activity activity, ArrayList<String> items, String dialogTitle, int style, String closeTitle,String hint,boolean showTitle) {
+        this.items = items;
+        this.context = activity;
+        this.dTitle = dialogTitle;
+        this.style = style;
+        this.closeTitle = closeTitle;
+        this.hint = hint ;
+        this.showTitle = showTitle;
+        initColor(context);
+    }
 
 
     public void bindOnSpinerListener(OnSpinerItemClick onSpinerItemClick1) {
@@ -117,6 +128,11 @@ public class SpinnerDialog {
         title.setTextColor(titleColor);
         searchBox.setTextColor(searchTextColor);
         searchBox.setHint(hint);
+        if (showTitle){
+            title.setVisibility(View.VISIBLE);
+        }else {
+            title.setVisibility(View.GONE);
+        }
         rippleViewClose.setTextColor(closeColor);
         searchIcon.setColorFilter(searchIconColor);
 

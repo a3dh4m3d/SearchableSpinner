@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerDialog = new SpinnerDialog(MainActivity.this, items,
                 "انتخاب گزینه مورد نظر");
 
-        spinnerDialog=new SpinnerDialog(MainActivity.this,items,"انتخاب گزینه مورد نظر",R.style.DialogAnimations_SmileWindow,"بستن","نام دکتر...");// With 	Animation
+        spinnerDialog=new SpinnerDialog(MainActivity.this,items,"انتخاب گزینه مورد نظر",R.style.DialogAnimations_SmileWindow,"بستن","نام دکتر...",false);// With 	Animation
 
       //  spinnerDialog.setTitleColor(getResources().getColor(R.color.colorAccent));
      /*   spinnerDialog.setSearchIconColor(getResources().getColor(R.color.colorAccent));
