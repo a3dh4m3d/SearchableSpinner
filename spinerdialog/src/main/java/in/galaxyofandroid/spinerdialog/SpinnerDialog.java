@@ -27,6 +27,7 @@ public class SpinnerDialog {
     ArrayList<String> items;
     Activity context;
     String dTitle, closeTitle = "Close";
+    String hint;
     OnSpinerItemClick onSpinerItemClick;
     AlertDialog alertDialog;
     int pos;
@@ -77,9 +78,22 @@ public class SpinnerDialog {
         initColor(context);
     }
 
+    public SpinnerDialog(Activity activity, ArrayList<String> items, String dialogTitle, int style, String closeTitle,String hint) {
+        this.items = items;
+        this.context = activity;
+        this.dTitle = dialogTitle;
+        this.style = style;
+        this.closeTitle = closeTitle;
+        this.hint = hint ;
+        initColor(context);
+    }
+
+
     public void bindOnSpinerListener(OnSpinerItemClick onSpinerItemClick1) {
         this.onSpinerItemClick = onSpinerItemClick1;
     }
+
+
 
     public void showSpinerDialog() {
         AlertDialog.Builder adb = new AlertDialog.Builder(context);
@@ -102,6 +116,7 @@ public class SpinnerDialog {
 
         title.setTextColor(titleColor);
         searchBox.setTextColor(searchTextColor);
+        searchBox.setHint(hint);
         rippleViewClose.setTextColor(closeColor);
         searchIcon.setColorFilter(searchIconColor);
 
