@@ -3,6 +3,15 @@ Fully Searchable Spiner Dialog
 
 ![Screen Shot](https://cloud.githubusercontent.com/assets/18304656/23259376/d470d6aa-f9f2-11e6-98f1-679f1e32af8f.gif)
 
+## Version 2.3
+change to right to left for rtl lang eg persian
+
+## Version 2.4
+add hint to search box in new constructor
+
+## Version 2.5
+add show/hide title in new constructor
+
 
 Step 1. Add the JitPack repository to your build file
 
@@ -15,7 +24,8 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.MdFarhanRaja:SearchableSpinner:2.0'
+	       	        implementation 'com.github.a3dh4m3d:SearchableSpinner:2.5'
+
 	}
   
 Step 3. Inside JAVA
