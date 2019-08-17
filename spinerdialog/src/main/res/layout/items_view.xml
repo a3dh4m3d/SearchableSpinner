@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/text1"
     android:padding="13dp"
-    android:textSize="16sp"
+    android:textSize="14sp"
     android:gravity="center|right">
 
 </TextView>
